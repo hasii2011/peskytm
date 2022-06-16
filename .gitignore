@@ -1,0 +1,12 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+.idea/
+__pycache__/
+.DS_Store
+build/
+dist/
+/peskytm.egg-info/
+/pyenv-3.9.9/
+.python-version
+.envrc
