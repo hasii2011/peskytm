@@ -28,7 +28,7 @@ else
             # python -O setup.py py2app --packages=wx,xmlschema,pygmlparser --iconfile src/org/pyut/resources/img/Pyut.icns
             python -O setup.py py2app --packages=click
             echo "remove invalid link that code signing complains about"
-            cd "dist/unmounttm.app/Contents/Resources/lib/python3.9"  || ! echo "No such directory"
+            cd "dist/peskytm.app/Contents/Resources/lib/python3.10"  || ! echo "No such directory"
             rm -rfv site.pyo
     else
         echo "Unknown command line arguments"
