@@ -60,3 +60,34 @@ Once you manually unmount this pesky volumes you can either use the graphical ut
 
 
 
+# How to Install
+
+You can copy the binary to Applications and click it to get it to execute.  However, that defeats the purpose of using it from the command line.
+
+My first inclination was to install it where [brew](https://brew.sh/) installs its binaries.  This strategy is pictured in the following screen snapshot.  Essentially the symbolic link points from `bin` to `../Cellar`
+
+
+
+![BrewBinaryInstallStrategy](images/BrewBinaryInstallStrategy.png)
+
+
+
+However, executing peskytm using that strategy results in the follow error.
+
+![InvalidPythonLocation](images/InvalidPythonLocation.png)
+
+My next option was to use a fully qualified symbolic link as follows.
+
+
+
+![FullPathSymbolicLink](images/FullPathSymbolicLink.png)
+
+ I got the same error.
+
+The final solution then is to use a shell alias.  For example, placing the following in your shell startup script
+
+`alias peskytm='/opt/homebrew/Cellar/peskytm/Contents/MacOS/peskytm'`
+
+
+
+Allows the utility to execute.  Thus, that is my recommnended solution
