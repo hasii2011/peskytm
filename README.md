@@ -37,7 +37,7 @@ Options:
 
 ```
 
-Notice this utility has no parameters.  You simply execute it.  Internally, `peskytm` use `sudo`, so you will be prompted for you OS X password (Don't worry the utility does nothing but pass it along).  You will then see output like the following:
+Notice this utility has no parameters.  You simply execute it.  Internally, `peskytm` use `sudo`, so you will be prompted for your OS X password (Don't worry the utility does nothing but pass it along).  You will then see output like the following:
 
 
 
@@ -84,10 +84,10 @@ My next option was to use a fully qualified symbolic link as follows.
 
  I got the same error.
 
-The final solution then is to use a shell alias.  For example, placing the following in your shell startup script
+The final solution then is to use a shell alias.  For example, place the following in your shell startup script.
 
 `alias peskytm='/opt/homebrew/Cellar/peskytm/Contents/MacOS/peskytm'`
 
 
 
-Allows the utility to execute.  Thus, that is my recommnended solution
+This allows the utility to execute.  Thus, that is my recommnended solution
