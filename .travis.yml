@@ -1,7 +1,4 @@
 
-# os: osx
-
-# osx_image: xcode11.2
 notifications:
   email:
     recipients:
@@ -9,19 +6,22 @@ notifications:
     on_success: change # default: change
     on_failure: always # default: always
 
-dist: bionic
+dist: jammy
 
 language: python
 
 cache: pip
 
 python:
-  - "3.10.0"
+  - "3.10"
 
 # command to install dependencies
 install:
-  - pip3 install click
+  - pip install .
+  - pip install .[test]
 
 
 # command to run tests
-script: ${TRAVIS_BUILD_DIR}/scripts/runtests.sh
+script:
+  - pip install buildlackey
+  - unittests

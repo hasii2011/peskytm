@@ -70,8 +70,8 @@ class UnMountTimeMachine:
     def _unMountTimeMachineVolumes(self, timeMachineVolumes: TimeMachineVolumes):
 
         for fsToUnMount in timeMachineVolumes:
-            # print(f'Unmount {fsToUnMount}')
-            cp: CompletedProcess = run(['sudo', 'umount', '-f', fsToUnMount], capture_output=True, encoding="utf-8")
+            print(f'Unmount {fsToUnMount}')
+            cp: CompletedProcess = run(['sudo', 'umount', fsToUnMount], capture_output=True, encoding="utf-8")
             if cp.returncode == 0:
                 print(f'{fsToUnMount} unmounted')
             else:
