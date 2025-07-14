@@ -1,7 +1,5 @@
 [![Build Status](https://app.travis-ci.com/hasii2011/peskytm.svg?branch=master)](https://app.travis-ci.com/hasii2011/pyut2xml)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
-[![macOS](https://svgshare.com/i/ZjP.svg)](https://svgshare.com/i/ZjP.svg)
-
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 # Introduction
@@ -62,32 +60,5 @@ Once you manually unmount this pesky volumes you can either use the graphical ut
 
 # How to Install
 
-You can copy the binary to Applications and click it to get it to execute.  However, that defeats the purpose of using it from the command line.
+`pipx install peskytm`
 
-My first inclination was to install it where [brew](https://brew.sh/) installs its binaries.  This strategy is pictured in the following screen snapshot.  Essentially the symbolic link points from `bin` to `../Cellar`
-
-
-
-![BrewBinaryInstallStrategy](images/BrewBinaryInstallStrategy.png)
-
-
-
-However, executing peskytm using that strategy results in the follow error.
-
-![InvalidPythonLocation](images/InvalidPythonLocation.png)
-
-My next option was to use a fully qualified symbolic link as follows.
-
-
-
-![FullPathSymbolicLink](images/FullPathSymbolicLink.png)
-
- I got the same error.
-
-The final solution then is to use a shell alias.  For example, place the following in your shell startup script.
-
-`alias peskytm='/opt/homebrew/Cellar/peskytm/Contents/MacOS/peskytm'`
-
-
-
-This allows the utility to execute.  Thus, that is my recommnended solution
