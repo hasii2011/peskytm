@@ -13,7 +13,7 @@ language: python
 cache: pip
 
 python:
-  - "3.10"
+  - "3.12"
 
 # command to install dependencies
 install:
